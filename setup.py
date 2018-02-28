@@ -12,6 +12,8 @@
 #   $ python setup.py install
 #
 
+from __future__ import absolute_import
+from __future__ import print_function
 from distutils.core import setup, Extension
 import os
 
@@ -21,7 +23,7 @@ VERSION = "1.1-64bits"
 FREETYPE_ROOT = "../../kits/freetype-2.1.10"
 
 if not os.path.isdir(FREETYPE_ROOT):
-    print "===", "freetype support disabled"
+    print("===", "freetype support disabled")
     FREETYPE_ROOT = None
 
 sources = [
